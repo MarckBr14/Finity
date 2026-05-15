@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #d9d9d9;
+    min-height: 100vh;
+    display: flex;
+}
+
+main {
+    padding: 40px 25px;
+    width: 100%;
+    height: 100vh;
+}
+
+main h1 {
+    font-size: 40px;
+    color: #10b981;
+}
+
+/* CARD DO HEADER */
+.cards 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card
+{
+    background-color: #fff;
+    width: 630px;
+    height: 181px;
+    border: solid 3px #cdcdcd;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.card .top
+{
+    width: auto;
+    height: 65px;
+    display: grid;
+    grid-template-columns: repeat(2,80px);
+}
+
+.card .top .icone
+{
+    background-color: #10b98167;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .top .icone i
+{
+    font-size: 27px;
+    color: #10b981;
+}
+
+.card .top h6
+{
+    font-size: 20px;
+    width: 150px;
+    color: #888;
+}
+
+.card .center
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card .bottom
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #888;
+}
+
+.card .bottom span
+{
+    color: #10b981;
+}

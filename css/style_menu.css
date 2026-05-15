@@ -1,0 +1,150 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.logo-box {
+  width: 52px;
+  height: 52px;
+  background: #9be3c6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #18b87a;
+}
+
+.logo h1 {
+  color: #18b87a;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 100%;
+  height: 4px;
+  background: #8eddc0;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px;
+  border-radius: 14px;
+  color: #111;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  background: #e9f7f1;
+}
+
+.menu-item.active {
+  background: #b7e5d3;
+  color: #15b879;
+}
+
+.menu-item i {
+  width: 25px;
+  font-size: 24px;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.progress-area h3 {
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.progress-area span {
+  color: #777;
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 7px;
+  background: #ddd;
+  border-radius: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 93%;
+  height: 100%;
+  background: #18b87a;
+  border-radius: 20px;
+}
+
+.bottom-divider {
+  width: 100%;
+  height: 4px;
+  background: #8eddc0;
+  border-radius: 10px;
+}
+
+/* PROFILE */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #b7e5d3;
+  border: 1px solid #18b87a;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h4 {
+  font-size: 14px;
+  color: #111;
+}
+
+.profile-info p {
+  font-size: 11px;
+  color: #777;
+}

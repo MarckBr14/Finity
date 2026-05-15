@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-    height: 729px;
+    height: 100vh;
     background-color: transparent;
     border: 2px;
     overflow: hidden;
@@ -17,7 +17,7 @@
 
 .left 
 {
-    background: url("../img/fundo_login2.png") no-repeat center/cover;
+    background: url("../img/fundo_login.png") no-repeat center/cover;
     width: 100%;
     height: 100%;
 }
@@ -30,7 +30,7 @@
 }
 
 .right form{
-    padding-top: 150px;
+    padding-top: 345px;
 }
 
 /* curva */
@@ -47,41 +47,45 @@
     border-bottom-left-radius: 50% 50%;
 }
 .main h1{
-    color: #105F68;
+    color: #10b981;
     text-align: center;
+    font-size: 50px;
 }
 
 .main h6{
     color: #888888;
     text-align: center;
     padding: 20px;
+    font-size: 15px;
 }
 
 form
 {
     top: 50%;
-    width: 354px;
+    width: 500px;
     margin: auto;
 }
 
 .input-box{
     position: relative;
-    width: 100%;
-    height:50px;
-    margin: 30px 0;
+    width: 500px;
+    height:60px;
+    margin: 12px 0;
+    color: #d9d9d9;
+    margin: 12px auto;
 }
 
 .input-box input{
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    background-color: transparent;
-    border: solid #888888;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    border: solid #cdcdcd;
     padding: 10px 10px 10px 40px;
 }
 
 .input-box input::placeholder {
-    color: #888888;
+    color: #a5a5a5;
 }
 
 .input-box i {
@@ -89,14 +93,14 @@ form
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
-    color: #888888;
+    font-size: 20px;
+    color: #a5a5a5;
 }
 
 .validacao{
     display: flex;
     justify-content:space-around;
-    margin: 20px 0 60px;
+    margin: 20px 0 30px;
     font-size: 17px;
     
 }
@@ -113,19 +117,23 @@ form
 
 .validacao a {
     text-decoration: none;
-    color:#105F68;
+    color:#10b981;
 }
 
-.login button {
+
+.btn {
     width: 58%;
     height: 50px;
-    background-color: #105F68;
+    background-color: #10b981;
     border: none;
     border-radius: 8px;
     display: block;
     margin: 20px auto;
     color: #fff;
     font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .registro_link p {
@@ -139,5 +147,5 @@ form
 
 .registro_link a {
     text-decoration: none;
-    color: #105F68;
+    color: #10b981;
 }
