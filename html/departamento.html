@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
+
+        <title>Departamento</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style_departamento.css">
+        <link rel="stylesheet" href="../css/style_menu.css">
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <!-- JS -->
+        <script src="../js/model.js" defer></script>
+    </head>
+    <body>
+         <!-- MODAL FORMULÁRIO -->
+        <div class="modal-overlay" id="modal">
+
+            <div class="modal">
+                <h2>Novo Departamento</h2>
+                
+                <form id="form">
+                    <input type="text" placeholder="Nome">
+                    <textarea placeholder="Descrição"></textarea>
+                    <button type="submit">
+                        Adicionar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- MODAL SUCESSO -->
+        <div class="success-overlay" id="successModal">
+
+            <div class="success-box">
+
+                <div class="check-icon">
+                    ✓
+                </div>
+
+                <p>Departamento criado com sucesso</p>
+
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+            <div>
+                <!-- LOGO -->
+                <div class="logo">
+                    <div class="logo-box">
+                        <img src="../img/Icone.svg" alt="">
+                    </div>
+
+                    <h1>finity</h1>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- MENU -->
+                <nav class="menu">
+                    <a href="deshbord.html">
+                        <div class="menu-item">
+                            <i class="uil uil-apps"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+
+                    <div class="menu-item">
+                        <i class="uil uil-users-alt"></i>
+                        <span>Usuários</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="uil uil-file-edit-alt"></i>
+                        <span>Assinaturas</span>
+                    </div>
+
+                    <a href="categoria.html">
+                        <div class="menu-item active">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Categorias</span>
+                        </div>
+                    </a>
+
+                    <div class="menu-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Departamentos</span>
+                    </div>
+
+                </nav>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+
+                <div class="progress-area">
+                    <h3>Finalinado Mês em</h3>
+                    <span>7 dias (93%)</span>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configurações</span>
+                </div>
+
+            
+                <a href="login.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Sair</span>
+                    </div>       
+                </a>
+                    
+                <div class="bottom-divider"></div>
+
+                <!-- PROFILE -->
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/100" alt="">
+
+                    <div class="profile-info">
+                        <h4>Mariene Barbosa</h4>
+                        <p>marienebarbosa@gmail.com</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </aside>
+
+        <main>
+            <h1>Departamentos</h1>
+            <div class="header">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <button onclick="abrirModal()" class="btn"><i class="fa-solid fa-plus"></i> Nova Categoria</button>
+            </div>
+        </main>
+    </body>
+</html>

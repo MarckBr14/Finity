@@ -6,16 +6,16 @@
 }
 
 body {
-    background: #d9d9d9;
+    background: #F4F4F4;
     min-height: 100vh;
     display: flex;
 }
 
-main {
+/* main {
     padding: 40px 25px;
     width: 100%;
     height: 100vh;
-}
+} */
 
 main h1 {
     font-size: 40px;
@@ -26,16 +26,16 @@ main h1 {
 .cards 
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns:  repeat(3, 1fr);
+    gap: 40px;
 }
 
 .card
 {
     background-color: #fff;
-    width: 630px;
+    min-width: 0;
     height: 181px;
-    border: solid 3px #cdcdcd;
+    border: solid 2px #cdcdcd;
     border-radius: 15px;
     margin-top: 10px;
     padding: 20px;
@@ -96,4 +96,286 @@ main h1 {
 .card .bottom span
 {
     color: #10b981;
+}
+
+/* ALERTA */
+
+.alerta
+{
+    display: grid;
+    grid-template-columns:60px 1fr auto;
+    gap: 20pxpx;
+    height: 90px;
+    background-color: #FDF6EE;
+    border: solid 2px #F8A739;
+    border-radius: 5px;
+    margin: 25px 0;
+    
+}
+
+.alerta .icone 
+{
+    color: #F8A739;
+    height: 100%;
+    max-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0 30px;
+    font-weight: bold;
+}
+
+.alerta .icone i
+{
+    font-size: 35px;
+}   
+
+.alerta .content
+{
+    display: block;
+    margin: 20px 10px;
+    align-items: center;
+}
+
+.alerta a
+{
+    display: flex;
+    text-decoration: none;
+    color: #F8A739;
+    font-weight: bold;
+    font-size: 18px;
+    align-items: center;
+    margin: 0 30px ;
+}
+
+/* CONTAINER */
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* ASSINATURAS */
+
+.container .assinaturas
+{
+    background-color: #fff;
+    width: 100%;
+    max-height: 760px;
+    border: solid 2px #cdcdcd;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.assinaturas .header
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.assinaturas .header a
+{
+    font-size: 17px;
+    color: #10b981;
+    text-decoration: none;
+    border: solid 2px #cdcdcd;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.assinaturas .header a:hover
+{
+    background-color: #10b981;
+    color: #fff;
+    border: solid 2px #10b981;
+    transition: all 0.3s ease;
+}
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.assinaturas .card{
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 18px;
+    display: grid;
+    gap: 10px;
+    height: auto;
+}
+
+.assinaturas .card-topo{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.assinaturas .logo{
+    width: 45px;
+    height: 45px;
+    background: black;
+    color: red;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.assinaturas .card-topo h3{
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500;
+    color: #333;    
+}
+
+.status{
+    color: #ff5b5b;
+    font-size: 22px;
+    text-align: center;
+}
+
+.assinaturas .card h1{
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    color: #333;
+}
+
+.barra{
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progresso{
+    width: 75%;
+    height: 100%;
+    background: #ff4d4d;
+    border-radius: 20px;
+}
+
+.btn-card{
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: transparent;
+    color: #4db6ac;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-card:hover{
+    background: #4db6ac;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* CATEGORIA */
+
+.container .categorias
+{
+    background-color: #fff;
+    width: 100%;
+    max-height: 760px;
+    border: solid 2px #cdcdcd;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+}
+
+.categorias h2{
+    margin: 0;
+    color: #333;
+    border-bottom: solid 2px #cdcdcd;
+}
+
+.categoria{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.categorias .icone{
+    width: 40px;
+    height: 40px;
+    background: #edf8f7;
+    color: #2ca6a4;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.categorias .conteudo{
+    display: grid;
+    gap: 10px;
+}
+
+.categorias .infos{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.categorias .infos span{
+    color: #888;
+    font-size: 15px;
+}
+
+.categorias .infos strong{
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.categorias .barra{
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.categorias .progresso{
+    height: 100%;
+    background: #2ca6a4;
+    border-radius: 20px;
+}
+
+/* TAMANHO DAS BARRAS */
+
+.streaming{
+    width: 85%;
+}
+
+.software{
+    width: 68%;
+}
+
+.musica{
+    width: 37%;
+}
+
+.jogos{
+    width: 54%;
+}
+
+.outros{
+    width: 43%;
 }
