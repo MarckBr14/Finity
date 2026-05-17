@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Usuario</title>
+
+    <link rel='stylesheet' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_menu.css">
+    <link rel="stylesheet" href="../css/style_usuario.css">
+
+    <script src="../js/model.js" defer></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+    <!-- MODAL FORMULÁRIO -->
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+            <h2>Nova Categoria</h2>
+            <div class="upload-area">
+                <div class="upload-circle">
+                    📷
+                </div>
+                <span>Foto</span>
+            </div>
+
+            <form id="form">
+                <input type="text" placeholder="Nome">
+                <textarea placeholder="Descrição"></textarea>
+                <button type="submit">
+                    Adicionar
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL SUCESSO -->
+    <div class="success-overlay" id="successModal">
+
+        <div class="success-box">
+
+            <div class="check-icon">
+                ✓
+            </div>
+
+            <p>Categoria criada com sucesso</p>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <aside class="sidebar">
+        <div>
+            <!-- LOGO -->
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="../img/Icone.svg" alt="">
+                </div>
+
+                <h1>finity</h1>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <a href="deshbord.html">
+                    <div class="menu-item">
+                        <i class="uil uil-apps"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+
+                <a href="usuario.html">
+                    <div class="menu-item active">
+                        <i class="uil uil-users-alt"></i>
+                        <span>Usuários</span>
+                    </div>
+                </a>
+
+                <a href="assinaturas.html">
+                    <div class="menu-item">
+                        <i class="uil uil-file-edit-alt"></i>
+                        <span>Assinaturas</span>
+                    </div>
+                </a>
+
+                <a href="categoria.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Categorias</span>
+                    </div>
+                </a>
+
+                <a href="departamento.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Departamentos</span>
+                    </div>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            <div class="progress-area">
+                <h3>Finalinado Mês em</h3>
+                <span>7 dias (93%)</span>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </div>
+
+
+            <a href="login.html">
+                <div class="menu-item">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </div>
+            </a>
+
+            <div class="bottom-divider"></div>
+
+            <!-- PROFILE -->
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100" alt="">
+
+                <div class="profile-info">
+                    <h4>Mariene Barbosa</h4>
+                    <p>marienebarbosa@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+    </aside>
+    <!-- Cards top -->
+    <main>
+        <h1>Usuarios</h1>
+        <section class="cards">
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-wallet"></i>
+                    </div>
+                    <h6>180</h6>
+                </div>
+                <div class="center">
+                    <h3>Usuarios registrados</h3>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-check-circle"></i>
+                    </div>
+                    <h6>52</h6>
+                </div>
+                <div class="center">
+                    <h3>Ativos</h3>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-comments"></i>
+                    </div>
+                    <h6>29</h6>
+                </div>
+                <div class="center">
+                    <h3>Novos esse mês</h3>
+                </div>
+            </div>
+        </section>
+        <div class="top-actions">
+            <div class="pesquisa">
+                <div class="input-box">
+                    <i class="uil uil-search"></i>
+                    <input placeholder=" Buscar usuarios..." type="text">
+                </div>
+            </div>
+
+            <button onclick="abrirModal()" class="btn"><i class="fa-solid fa-plus"></i> Novo Usuário</button>
+        </div>
+
+        <section class="table-users">
+
+            <div class="table-header">
+                <span>NOME</span>
+                <span>E-MAIL</span>
+                <span>STATUS</span>
+                <span>ULTIMO ACESSO</span>
+                <span>AÇÕES</span>
+            </div>
+
+            <div class="table-row">
+
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/40?img=1" alt="">
+                    <h4>Mariene Barbosa</h4>
+                </div>
+
+                <p>Marienebarbosap97@gmail.com</p>
+
+                <div class="status">
+                    <div class="dot"></div>
+                    <span>Ativo</span>
+                </div>
+
+                <p>09h45 AM</p>
+
+                <button class="edit-btn">
+                    Editar
+                </button>
+
+            </div>
+
+            <div class="table-row">
+
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/40?img=2" alt="">
+                    <h4>Marcos Antonio</h4>
+                </div>
+
+                <p>Marcos.Antonio@gmail.com</p>
+
+                <div class="status">
+                    <div class="dot"></div>
+                    <span>Ativo</span>
+                </div>
+
+                <p>09h45 AM</p>
+
+                <button class="edit-btn">
+                    Editar
+                </button>
+
+            </div>
+
+            <div class="table-row">
+
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="">
+                    <h4>Reinaldo Barbosa</h4>
+                </div>
+
+                <p>reinaldoBarbosa@gmail.com</p>
+
+                <div class="status">
+                    <div class="dot"></div>
+                    <span>Ativo</span>
+                </div>
+
+                <p>09h45 AM</p>
+
+                <button class="edit-btn">
+                    Editar
+                </button>
+
+            </div>
+
+            <div class="table-row">
+
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/40?img=4" alt="">
+                    <h4>Paulo Pelisser</h4>
+                </div>
+
+                <p>paulinhogames@gmail.com</p>
+
+                <div class="status">
+                    <div class="dot"></div>
+                    <span>Ativo</span>
+                </div>
+
+                <p>09h45 AM</p>
+
+                <button class="edit-btn">
+                    Editar
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+</body>
+
+</html>

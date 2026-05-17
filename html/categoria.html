@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
 
-        <title>Categoria</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style_categoria.css">
-        <link rel="stylesheet" href="../css/style_menu.css">
+    <title>Categoria</title>
 
-        <!-- Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_categoria.css">
+    <link rel="stylesheet" href="../css/style_menu.css">
 
+<<<<<<< HEAD
         
     </head>
     <body>
+=======
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+>>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 
-        <!-- MODAL FORMULÁRIO -->
-        <div class="modal-overlay" id="modal">
+    <!-- JS -->
+    <script src="../js/model.js" defer></script>
+</head>
 
-            <div class="modal">
-                <h2>Nova Categoria</h2>
-                <div class="upload-area">
-                    <div class="upload-circle">
-                        📷
-                    </div>
-                    <span>Foto</span>
+<body>
+
+    <!-- MODAL FORMULÁRIO -->
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+            <h2>Nova Categoria</h2>
+            <div class="upload-area">
+                <div class="upload-circle">
+                    📷
                 </div>
+<<<<<<< HEAD
 
                 <form id="form">
                     <input type="text" id="nomeCategoria" placeholder="Nome">
@@ -41,38 +49,49 @@
                         Adicionar
                     </button>
                 </form>
-            </div>
-        </div>
-
-
-        <!-- MODAL SUCESSO -->
-        <div class="success-overlay" id="successModal">
-
-            <div class="success-box">
-
-                <div class="check-icon">
-                    ✓
-                </div>
-
-                <p>Categoria criada com sucesso</p>
-
+=======
+                <span>Foto</span>
+>>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
             </div>
 
+            <form id="form">
+                <input type="text" placeholder="Nome">
+                <textarea placeholder="Descrição"></textarea>
+                <button type="submit">
+                    Adicionar
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL SUCESSO -->
+    <div class="success-overlay" id="successModal">
+
+        <div class="success-box">
+
+            <div class="check-icon">
+                ✓
+            </div>
+
+            <p>Categoria criada com sucesso</p>
+
         </div>
 
-        <aside class="sidebar">
-            <div>
-                <!-- LOGO -->
-                <div class="logo">
-                    <div class="logo-box">
-                        <img src="../img/Icone.svg" alt="">
-                    </div>
+    </div>
 
-                    <h1>finity</h1>
+    <aside class="sidebar">
+        <div>
+            <!-- LOGO -->
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="../img/Icone.svg" alt="">
                 </div>
 
-                <div class="divider"></div>
+                <h1>finity</h1>
+            </div>
 
+<<<<<<< HEAD
                 <!-- MENU -->
                 <nav class="menu">
                     <a href="dashboard.html">
@@ -81,85 +100,94 @@
                             <span>Dashboard</span>
                         </div>
                     </a>
+=======
+            <div class="divider"></div>
+>>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 
+            <!-- MENU -->
+            <nav class="menu">
+                <a href="deshbord.html">
+                    <div class="menu-item">
+                        <i class="uil uil-apps"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+
+                <a href="usario.html">
                     <div class="menu-item">
                         <i class="uil uil-users-alt"></i>
                         <span>Usuários</span>
                     </div>
+                </a>
 
+                <a href="assinaturas.html">
                     <div class="menu-item">
                         <i class="uil uil-file-edit-alt"></i>
                         <span>Assinaturas</span>
                     </div>
+                </a>
 
-
+                <a href="#">
                     <div class="menu-item active">
                         <i class="fa-solid fa-layer-group"></i>
                         <span>Categorias</span>
                     </div>
-
-                    <a href="departamento.html">
-                        <div class="menu-item">
-                            <i class="fa-solid fa-code-branch"></i>
-                            <span>Departamentos</span>
-                        </div>
-                    </a>
-
-                </nav>
-
-            </div>
-
-            <!-- FOOTER -->
-            <div class="footer">
-
-                <div class="progress-area">
-                    <h3>Finalinado Mês em</h3>
-                    <span>7 dias (93%)</span>
-
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Configurações</span>
-                </div>
-
-            
-                <a href="login.html">
-                    <div class="menu-item">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Sair</span>
-                    </div>       
                 </a>
-                    
-                <div class="bottom-divider"></div>
 
-                <!-- PROFILE -->
-                <div class="profile">
-
-                    <img src="https://i.pravatar.cc/100" alt="">
-
-                    <div class="profile-info">
-                        <h4>Mariene Barbosa</h4>
-                        <p>marienebarbosa@gmail.com</p>
+                <a href="departamento.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Departamentos</span>
                     </div>
+                </a>
 
+            </nav>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            <div class="progress-area">
+                <h3>Finalinado Mês em</h3>
+                <span>7 dias (93%)</span>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </div>
+
+
+            <a href="login.html">
+                <div class="menu-item">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </div>
+            </a>
+
+            <div class="bottom-divider"></div>
+
+            <!-- PROFILE -->
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100" alt="">
+
+                <div class="profile-info">
+                    <h4>Mariene Barbosa</h4>
+                    <p>marienebarbosa@gmail.com</p>
                 </div>
 
             </div>
-        </aside>
 
-        <main>
-            <div class="header">
-                <div class="text">
-                    <h1>Categorias</h1>
-                    <p>Gerencie suas categorias aqui</p>
-                </div>
-                <button onclick="abrirModal()" class="btn"><i class="fa-solid fa-plus"></i> Nova Categoria</button>
-            </div>
+        </div>
+    </aside>
 
+<<<<<<< HEAD
             <div class="grid-cards" id="listaCategorias">
                 <!-- <div class="card">
                     <h1>🎮</h1>
@@ -183,4 +211,35 @@
     <!-- JS -->
     <script src="../js/categoria.js" defer></script>
     <script src="../js/menu.js" defer></script>
+=======
+    <main>
+        <div class="header">
+            <div class="text">
+                <h1>Categorias</h1>
+                <p>Gerencie suas categorias aqui</p>
+            </div>
+            <button onclick="abrirModal()" class="btn"><i class="fa-solid fa-plus"></i> Nova Categoria</button>
+        </div>
+
+        <div class="grid-cards">
+            <div class="card">
+                <h1>🎮</h1>
+                <h3>Games</h3>
+                <p>Total gasto: R$ 1.200,00</p>
+            </div>
+            <div class="card">
+                <h1>🎧</h1>
+                <h3>Games</h3>
+                <p>Total gasto: R$ 1.200,00</p>
+            </div>
+            <div class="card">
+                <h1>💻</h1>
+                <h3>Games</h3>
+                <p>Total gasto: R$ 1.200,00</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+>>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 </html>
