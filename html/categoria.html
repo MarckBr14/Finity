@@ -18,8 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-        <!-- JS -->
-        <script src="../js/model.js" defer></script>
+        
     </head>
     <body>
 
@@ -36,9 +35,9 @@
                 </div>
 
                 <form id="form">
-                    <input type="text" placeholder="Nome">
-                    <textarea placeholder="Descrição"></textarea>
-                    <button type="submit">
+                    <input type="text" id="nomeCategoria" placeholder="Nome">
+                    <textarea id="descricaoCategoria" placeholder="Descrição"></textarea>
+                    <button type="submit" id="btnSalvarCategoria">
                         Adicionar
                     </button>
                 </form>
@@ -76,7 +75,7 @@
 
                 <!-- MENU -->
                 <nav class="menu">
-                    <a href="deshbord.html">
+                    <a href="dashboard.html">
                         <div class="menu-item">
                             <i class="uil uil-apps"></i>
                             <span>Dashboard</span>
@@ -161,8 +160,8 @@
                 <button onclick="abrirModal()" class="btn"><i class="fa-solid fa-plus"></i> Nova Categoria</button>
             </div>
 
-            <div class="grid-cards">
-                <div class="card">
+            <div class="grid-cards" id="listaCategorias">
+                <!-- <div class="card">
                     <h1>🎮</h1>
                     <h3>Games</h3>
                     <p>Total gasto: R$ 1.200,00</p>
@@ -176,8 +175,12 @@
                     <h1>💻</h1>
                     <h3>Games</h3>
                     <p>Total gasto: R$ 1.200,00</p>
-                </div>
+                </div> -->
             </div>
         </main>
     </body>
+
+    <!-- JS -->
+    <script src="../js/categoria.js" defer></script>
+    <script src="../js/menu.js" defer></script>
 </html>

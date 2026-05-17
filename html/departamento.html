@@ -17,9 +17,6 @@
         <!-- Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-        <!-- JS -->
-        <script src="../js/model.js" defer></script>
     </head>
     <body>
          <!-- MODAL FORMULÁRIO -->
@@ -29,8 +26,8 @@
                 <h2>Novo Departamento</h2>
                 
                 <form id="form">
-                    <input type="text" placeholder="Nome">
-                    <textarea placeholder="Descrição"></textarea>
+                    <input type="text" id="nomeDepartamento" placeholder="Nome">
+                    <textarea id="descricaoDepartamento" placeholder="Descrição"></textarea>
                     <button type="submit">
                         Adicionar
                     </button>
@@ -53,7 +50,9 @@
         </div>
 
         <aside class="sidebar">
+
             <div>
+
                 <!-- LOGO -->
                 <div class="logo">
                     <div class="logo-box">
@@ -67,14 +66,14 @@
 
                 <!-- MENU -->
                 <nav class="menu">
-                    <a href="deshbord.html">
-                        <div class="menu-item">
+                    <a href="dashboard.html">
+                        <div class="menu-item active">
                             <i class="uil uil-apps"></i>
                             <span>Dashboard</span>
                         </div>
                     </a>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="menuUsuarios">
                         <i class="uil uil-users-alt"></i>
                         <span>Usuários</span>
                     </div>
@@ -90,11 +89,13 @@
                             <span>Categorias</span>
                         </div>
                     </a>
-
-                    <div class="menu-item active">
-                        <i class="fa-solid fa-code-branch"></i>
-                        <span>Departamentos</span>
-                    </div>
+                    
+                    <a href="departamento.html">
+                        <div class="menu-item">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Departamentos</span>
+                        </div>
+                    </a>
 
                 </nav>
 
@@ -104,11 +105,10 @@
             <div class="footer">
 
                 <div class="progress-area">
-                    <h3>Finalinado Mês em</h3>
-                    <span>7 dias (93%)</span>
-
+                    <h3>Finalizando mês em</h3>
+                    <span id="textoMes"></span>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div class="progress" id="barraMes"></div>
                     </div>
                 </div>
 
@@ -118,7 +118,7 @@
                 </div>
 
             
-                <a href="login.html">
+                <a href="#" onclick="logout()">
                     <div class="menu-item">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <span>Sair</span>
@@ -133,13 +133,14 @@
                     <img src="https://i.pravatar.cc/100" alt="">
 
                     <div class="profile-info">
-                        <h4>Mariene Barbosa</h4>
-                        <p>marienebarbosa@gmail.com</p>
+                        <h4 id="nomeUsuario"></h4>
+                        <p id="emailUsuario"></p>
                     </div>
 
                 </div>
 
             </div>
+
         </aside>
 
         <main>
@@ -162,51 +163,17 @@
                         </tr>
                     </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>Recursos Humanos</td>
-                            <td>
-                                responsável pela gestão de colaboradores da empresa.                            
-                            </td>
-                            <td>
-                                <button>Editar</button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>TI</td>
-                            <td>
-                                cuida dos sistemas, infraestrutura e suporte tecnológico...
-                            </td>
-                            <td>
-                                <button>Editar</button>
-                            </td>
-                            </tr>
-
-                            <tr>
-                                <td>Marketing</td>
-                                <td>
-                                    Responsável pela divulgação da empresa, criação de campanhas...
-                                </td>
-                                <td>
-                                    <button>Editar</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Financeiro</td>
-
-                                <td>
-                                    Responsável pelo controle financeiro da empresa...
-                                </td>
-
-                                <td>
-                                    <button>Editar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <tbody id="listaDepartamentos">
+                        
+                    </tbody>
+                </table>
             </div>
         </main>
     </body>
+
+    <!-- JS -->
+     <script src="../js/menu.js"></script>
+    <!-- <script src="../js/model.js" defer></script> -->
+     <script src="../js/departamento.js"></script>
+     <!-- <script src="../js/auth.js"></script> -->
 </html>
