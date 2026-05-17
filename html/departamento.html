@@ -29,63 +29,39 @@
 
     <!-- MODAL FORMULÁRIO -->
     <div class="modal-overlay" id="modal">
-
         <div class="modal">
-
             <h2>Novo Departamento</h2>
-
             <form id="form">
-
                 <input type="text" placeholder="Nome">
-
                 <textarea placeholder="Descrição"></textarea>
-
-                <button type="submit">
-                    Adicionar
-                </button>
-
+                <button type="submit">Adicionar</button>
             </form>
-
         </div>
-
     </div>
 
     <!-- MODAL SUCESSO -->
     <div class="success-overlay" id="successModal">
-
         <div class="success-box">
-
-            <div class="check-icon">
-                ✓
-            </div>
-
+            <div class="check-icon">✓</div>
             <p>Departamento criado com sucesso</p>
-
         </div>
-
     </div>
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-
         <div>
-
             <!-- LOGO -->
             <div class="logo">
-
                 <div class="logo-box">
-                    <img src="../img/Icone.svg" alt="">
+                    <img src="../img/Icone.svg" alt="Logo finity">
                 </div>
-
                 <h1>finity</h1>
-
             </div>
 
             <div class="divider"></div>
 
             <!-- MENU -->
             <nav class="menu">
-
                 <a href="deshbord.html">
                     <div class="menu-item">
                         <i class="uil uil-apps"></i>
@@ -96,7 +72,7 @@
                 <a href="usario.html">
                     <div class="menu-item">
                         <i class="uil uil-users-alt"></i>
-                        <span>Usuários</span>
+                        <span>Usuarios</span>
                     </div>
                 </a>
 
@@ -120,24 +96,17 @@
                         <span>Departamentos</span>
                     </div>
                 </a>
-
             </nav>
-
         </div>
 
         <!-- FOOTER -->
         <div class="footer">
-
             <div class="progress-area">
-
                 <h3>Finalizando mês em</h3>
-
                 <span>7 dias (93%)</span>
-
                 <div class="progress-bar">
                     <div class="progress"></div>
                 </div>
-
             </div>
 
             <div class="menu-item">
@@ -146,141 +115,84 @@
             </div>
 
             <a href="login.html">
-
                 <div class="menu-item">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Sair</span>
                 </div>
-
             </a>
 
             <div class="bottom-divider"></div>
 
             <!-- PROFILE -->
             <div class="profile">
-
-                <img src="https://i.pravatar.cc/100" alt="">
-
+                <img src="https://i.pravatar.cc/100" alt="Foto de perfil">
                 <div class="profile-info">
                     <h4>Mariene Barbosa</h4>
                     <p>marienebarbosa@gmail.com</p>
                 </div>
-
             </div>
-
         </div>
-
     </aside>
 
     <!-- MAIN -->
     <main>
-
         <!-- HEADER -->
         <div class="header">
-
             <h1>Departamentos</h1>
-
             <div class="top-actions">
-
                 <div class="search-box">
-
                     <i class="uil uil-search"></i>
-
                     <input type="text" placeholder="Buscar departamentos...">
-
                 </div>
-
                 <button onclick="abrirModal()" class="btn">
                     <i class="fa-solid fa-plus"></i>
                     Add Departamento
                 </button>
-
             </div>
-
         </div>
 
-        <!-- TABELA -->
+        <!-- TABELA CONVERTIDA EM ELEMENTO TABLE REAL -->
         <section class="table-container">
-
-            <!-- HEADER -->
-            <div class="table-header">
-
-                <span>NOME</span>
-                <span>DESCRIÇÃO</span>
-                <span>EDIÇÃO</span>
-
-            </div>
-
-            <!-- LINHA -->
-            <div class="table-row">
-
-                <div class="nome">
-                    Recursos Humanos
-                </div>
-
-                <div class="descricao">
-                    Responsável pela gestão de colaboradores da empresa...
-                </div>
-
-                <div class="acao">
-                    <button class="editar-btn">Editar</button>
-                </div>
-
-            </div>
-
-            <!-- LINHA -->
-            <div class="table-row">
-
-                <div class="nome">
-                    TI
-                </div>
-
-                <div class="descricao">
-                    Cuida dos sistemas, infraestrutura e suporte tecnológico...
-                </div>
-
-                <div class="acao">
-                    <button class="editar-btn">Editar</button>
-                </div>
-
-            </div>
-
-            <!-- LINHA -->
-            <div class="table-row">
-
-                <div class="nome">
-                    Marketing
-                </div>
-
-                <div class="descricao">
-                    Responsável pela divulgação da empresa e campanhas...
-                </div>
-
-                <div class="acao">
-                    <button class="editar-btn">Editar</button>
-                </div>
-
-            </div>
-
-            <!-- LINHA -->
-            <div class="table-row">
-
-                <div class="nome">
-                    Financeiro
-                </div>
-
-                <div class="descricao">
-                    Responsável pelo controle financeiro da empresa...
-                </div>
-
-                <div class="acao">
-                    <button class="editar-btn">Editar</button>
-                </div>
-
-            </div>
-
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>DESCRIÇÃO</th>
+                        <th>EDIÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="nome">Recursos Humanos</td>
+                        <td class="descricao">Responsável pela gestão de colaboradores da empresa...</td>
+                        <td class="acao">
+                            <button class="editar-btn">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nome">TI</td>
+                        <td class="descricao">Cuida dos sistemas, infraestrutura e suporte tecnológico...</td>
+                        <td class="acao">
+                            <button class="editar-btn">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nome">Marketing</td>
+                        <td class="descricao">Responsável pela divulgação da empresa, criação de campanhas...</td>
+                        <td class="acao">
+                            <button class="editar-btn">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nome">Financeiro</td>
+                        <td class="descricao">Responsável pelo controle financeiro da empresa...</td>
+                        <td class="acao">
+                            <button class="editar-btn">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-
     </main>
 
 </body>
