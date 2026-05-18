@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+    color: #202020;
+}
+
+.sidebar{
+    width: 270px;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 22px;
+    border-right: 1px solid #ececec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.logo-box{
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #a6e4cf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1{
+    font-size: 30px;
+    color: #12c48b;
+    font-weight: 700;
+}
+
+.divider,
+.bottom-divider{
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background: #a6e4cf;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.menu-item:hover{
+    background: #eefaf5;
+}
+
+.menu-item.active{
+    background: #bfe8d8;
+    color: #10b981;
+}
+
+.menu-item svg{
+    width: 20px;
+    height: 20px;
+}
+
+.submenu{
+    margin-left: 22px;
+    padding-left: 18px;
+    border-left: 1px dashed #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.submenu a{
+    font-size: 14px;
+    color: #707070;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.progress-area h3{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-area span{
+    font-size: 13px;
+    color: #7c7c7c;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 7px;
+    border-radius: 999px;
+    background: #e8e8e8;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress{
+    width: 93%;
+    height: 100%;
+    background: #10b981;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #10b981;
+    background: #bfe8d8;
+}
+
+.profile img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h4{
+    font-size: 13px;
+}
+
+.profile-info p{
+    font-size: 11px;
+    color: #666;
+}
+
+main{
+    margin-left: 270px;
+    min-height: 100vh;
+    padding: 90px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.back-btn{
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    align-items: center;
+    color: #10b981;
+    margin-bottom: -5px;
+    transition: .2s;
+}
+
+.back-btn:hover{
+    transform: translateX(-4px);
+}
+
+.back-btn svg{
+    width: 38px;
+    height: 38px;
+}
+
+.subscription-header{
+    width: 100%;
+    max-width: 980px;
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow:
+    0 2px 8px rgba(0,0,0,0.04);
+}
+
+.brand-logo{
+    width: 72px;
+    height: 72px;
+    background: #000;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.netflix-icon{
+    color: #E50914;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.brand-details h2{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.brand-details p{
+    font-size: 16px;
+    color: #7a7a7a;
+    font-style: italic;
+}
+
+.info-container{
+    width: 100%;
+    max-width: 980px;
+    background: #fff;
+    padding: 34px;
+    border-radius: 14px;
+    box-shadow:
+    0 2px 8px rgba(0,0,0,0.04);
+}
+
+.info-container h3{
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 38px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label{
+    font-size: 14px;
+    color: #b1b1b1;
+}
+
+.form-group input{
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background: #fafafa;
+    font-size: 15px;
+    outline: none;
+}
+
+.actions-group{
+    display: flex;
+    gap: 20px;
+    margin-top: 34px;
+}
+
+.btn{
+    flex: 1;
+    height: 46px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-edit{
+    background: transparent;
+    border: 1px solid #10b981;
+    color: #10b981;
+}
+
+.btn-edit:hover{
+    background: #eefaf5;
+}
+
+.btn-pay{
+    border: none;
+    background: #10b981;
+    color: #fff;
+}
+
+.btn-pay:hover{
+    background: #0ea371;
+}
+
+.uil-left-arrow-to-left{
+    font-size: 38px;
+    color: #10b981;
+    cursor: pointer;
+    transition: .2s;
+    margin-left: -490px;
+}
+
+.uil-left-arrow-to-left:hover{
+    transform: translateX(-4px);
+}

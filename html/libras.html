@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste VLibras</title>
+</head>
+<body>
+
+    <!-- Texto apenas para garantir que a página não está em branco -->
+    <main style="padding: 20px; font-family: sans-serif;">
+        <h1>Teste de Acessibilidade</h1>
+    </main>
+
+    <!-- ======= ESTRUTURA DO VLIBRAS ======= -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top"></div>
+        </div>
+    </div>
+    
+    <!-- ======= SCRIPT ATUALIZADO ======= -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        // Inicialização padrão recomendada
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

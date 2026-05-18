@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
+
+    <title>Visualizar assinaturas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/visualizar_assinatura.css">
+    <link rel="stylesheet" href="../css/style_menu.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- JS -->
+    <script src="../js/model.js" defer></script>
+</head>
+
+<body>
+
+    <body>
+
+        <!-- MODAL FORMULÁRIO -->
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <h2>Novo Departamento</h2>
+                <form id="form">
+                    <textarea placeholder="Descrição"></textarea>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- MODAL SUCESSO -->
+        <div class="success-overlay" id="successModal">
+            <div class="success-box">
+                <div class="check-icon">✓</div>
+                <p>Departamento criado com sucesso</p>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div>
+                <!-- LOGO -->
+                <div class="logo">
+                    <div class="logo-box">
+                        <img src="../img/Icone.svg" alt="Logo finity">
+                    </div>
+                    <h1>finity</h1>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- MENU -->
+                <nav class="menu">
+                    <a href="deshbord.html">
+                        <div class="menu-item">
+                            <i class="uil uil-apps"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+
+                    <a href="usario.html">
+                        <div class="menu-item">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Usuarios</span>
+                        </div>
+                    </a>
+
+                    <a href="assinaturas.html">
+                        <div class="menu-item active">
+                            <i class="uil uil-file-edit-alt"></i>
+                            <span>Assinaturas</span>
+                        </div>
+                    </a>
+
+                    <a href="categoria.html">
+                        <div class="menu-item">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Categorias</span>
+                        </div>
+                    </a>
+
+                    <a href="departamento.html">
+                        <div class="menu-item ">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Departamentos</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <div class="progress-area">
+                    <h3>Finalizando mês em</h3>
+                    <span>7 dias (93%)</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configurações</span>
+                </div>
+
+                <a href="login.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Sair</span>
+                    </div>
+                </a>
+
+                <div class="bottom-divider"></div>
+
+                <!-- PROFILE -->
+                <div class="profile">
+                    <img src="https://i.pravatar.cc/100" alt="Foto de perfil">
+                    <div class="profile-info">
+                        <h4>Mariene Barbosa</h4>
+                        <p>marienebarbosa@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <a href="assinaturas.html">
+                <i class="uil uil-left-arrow-to-left"></i>
+            </a>    
+            <div class="subscription-header">
+                <div class="brand-logo">
+                    <div class="netflix-icon">N</div>
+                </div>
+                <div class="brand-details">
+                    <h2>Netflix</h2>
+                    <p>Valor - <span>R$ 59,90</span></p>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h3>Informações</h3>
+
+                <div class="info-grid">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" value="Netflix" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Valor</label>
+                        <input type="text" value="R$ 59,90" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data de criação</label>
+                        <input type="text" value="17/05/2026" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data de Vencimento</label>
+                        <input type="text" value="31/05/2026" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <input type="text" value="Streaming" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Usuário</label>
+                        <input type="text" value="Mariene" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <input type="text" value="Pendente" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <input type="text" value="Pendente" disabled>
+                    </div>
+                </div>
+
+                <div class="actions-group">
+                    <button class="btn btn-edit">Editar</button>
+                    <button class="btn btn-pay">Pagar</button>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+
+</html>
