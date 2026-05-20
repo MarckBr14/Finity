@@ -1,4 +1,4 @@
-const token = localStorage.getItem("token");
+
 
 const lista =
     document.getElementById("listaCategorias");

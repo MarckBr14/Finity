@@ -1,4 +1,4 @@
-const token = localStorage.getItem("token");
+
 
 const form =
     document.getElementById("form");

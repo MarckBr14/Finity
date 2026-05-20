@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Usuario</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
+
+    <link rel='stylesheet' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style_menu.css">
+    <link rel="stylesheet" href="../css/style_usuario.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet"
+        href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+    <!-- MODAL FORMULÁRIO -->
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <h2 id="tituloModal">
+                Novo Usuário
+            </h2>
+
+            <form id="form">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                    required
+                >
+
+                <div class="input">
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Senha"
+                        onfocus="mostrarRequisitosSenha()"
+                        onblur="esconderRequisitosSenha()"
+                        oninput="validarSenhaVisual()"
+                    >
+
+                    <div class="senha-requisitos">
+
+                        <p id="req-tamanho">
+                            ❌ Mínimo 6 caracteres
+                        </p>
+
+                        <p id="req-maiuscula">
+                            ❌ Uma letra maiúscula
+                        </p>
+
+                        <p id="req-numero">
+                            ❌ Um número
+                        </p>
+
+                        <p id="req-especial">
+                            ❌ Um caractere especial
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <input
+                    type="text"
+                    id="cargo"
+                    placeholder="Cargo"
+                >
+
+                <input
+                    type="text"
+                    id="matricula"
+                    placeholder="Matrícula"
+                >
+
+                <select id="nivelAcesso">
+
+                    <option value="User">
+                        Usuário
+                    </option>
+
+                    <option value="Admin">
+                        Admin
+                    </option>
+
+                </select>
+
+                <select id="statusUsuario">
+
+                    <option value="Ativo">
+                        Ativo
+                    </option>
+
+                    <option value="Inativo">
+                        Inativo
+                    </option>
+
+                </select>
+
+                <select id="departamento">
+
+                    <option value="">
+                        Selecione um departamento
+                    </option>
+
+                </select>
+
+                <button
+                    type="submit"
+                    id="btnSalvar"
+                >
+                    Adicionar
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MODAL SUCESSO -->
+    <div class="success-overlay" id="successModal">
+
+        <div class="success-box">
+
+            <div class="check-icon">
+                ✓
+            </div>
+
+            <p id="mensagemSucesso">
+                Usuário criado com sucesso
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div>
+
+            <!-- LOGO -->
+            <div class="logo">
+
+                <div class="logo-box">
+                    <img src="../img/Icone.svg" alt="">
+                </div>
+
+                <h1>finity</h1>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- MENU -->
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    <div class="menu-item">
+
+                        <i class="uil uil-apps"></i>
+
+                        <span>Dashboard</span>
+
+                    </div>
+
+                </a>
+
+                <a href="usuario.html" id="menuUsuarios">              
+                        <div class="menu-item">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Usuários</span>
+                        </div>
+                    </a>
+
+                <a href="assinaturas.html">
+
+                    <div class="menu-item">
+
+                        <i class="uil uil-file-edit-alt"></i>
+
+                        <span>Assinaturas</span>
+
+                    </div>
+
+                </a>
+
+                <a href="categoria.html">
+
+                    <div class="menu-item">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span>Categorias</span>
+
+                    </div>
+
+                </a>
+
+                <a href="departamento.html">
+
+                    <div class="menu-item">
+
+                        <i class="fa-solid fa-code-branch"></i>
+
+                        <span>Departamentos</span>
+
+                    </div>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            <div class="progress-area">
+
+                <h3>Finalizando mês em</h3>
+
+                <span id="textoMes"></span>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress"
+                        id="barraMes"
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-item">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Configurações</span>
+
+            </div>
+
+            <a href="#" onclick="logout()">
+
+                <div class="menu-item">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Sair</span>
+
+                </div>
+
+            </a>
+
+            <div class="bottom-divider"></div>
+
+            <!-- PROFILE -->
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100" alt="">
+
+                <div class="profile-info">
+
+                    <h4 id="nomeUsuario"></h4>
+
+                    <p id="emailUsuario"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+    <main>
+
+        <h1>Usuários</h1>
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="top">
+
+                    <div class="icone">
+                        <i class="uil uil-wallet"></i>
+                    </div>
+
+                    <h6 id="totalUsuarios">
+                        0
+                    </h6>
+
+                </div>
+
+                <div class="center">
+
+                    <h3>
+                        Usuários registrados
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="top">
+
+                    <div class="icone">
+                        <i class="uil uil-check-circle"></i>
+                    </div>
+
+                    <h6 id="usuariosAtivos">
+                        0
+                    </h6>
+
+                </div>
+
+                <div class="center">
+
+                    <h3>
+                        Ativos
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="top">
+
+                    <div class="icone">
+                        <i class="uil uil-comments"></i>
+                    </div>
+
+                    <h6 id="usuariosMes">
+                        0
+                    </h6>
+
+                </div>
+
+                <div class="center">
+
+                    <h3>
+                        Novos esse mês
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACTIONS -->
+        <div class="top-actions">
+
+            <div class="pesquisa">
+
+                <div class="input-box">
+
+                    <i class="uil uil-search"></i>
+
+                    <input
+                        id="pesquisaUsuario"
+                        placeholder="Buscar usuários..."
+                        type="text"
+                    >
+
+                </div>
+
+            </div>
+
+            <button onclick="novoUsuario()" class="btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Novo Usuário
+
+            </button>
+
+        </div>
+
+
+
+        <!-- TABELA -->
+        <section class="table-users">
+
+            <div class="table-header">
+
+                <span>NOME</span>
+
+                <span>E-MAIL</span>
+
+                <span>STATUS</span>
+
+                <span>CARGO</span>
+
+                <span>AÇÕES</span>
+
+            </div>
+
+            <div id="listaUsuarios"></div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <!-- <script src="../js/model.js"></script> -->
+
+    <script src="../js/usuario.js"></script>
+
+</body>
+
+</html>

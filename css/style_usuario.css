@@ -95,7 +95,8 @@ main h1 {
 
 /* INPUTS */
 .modal input,
-.modal textarea {
+.modal textarea,
+.modal select {
   width: 100%;
 
   border: 1px solid #ddd;
@@ -104,7 +105,7 @@ main h1 {
   padding: 15px;
 
   margin-bottom: 20px;
-
+ color: #8b8b8b ;
   font-size: 16px;
 
   outline: none;
@@ -413,7 +414,83 @@ main h1 {
     border-color: #10b981;
 }
 
+.senha-requisitos{
 
+    display: none;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    background: #1e1e1e;
+
+    border: 1px solid #2e2e2e;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    animation: fadeIn 0.2s ease;
+}
+
+.senha-requisitos.active{
+
+    display: flex;
+}
+
+.senha-requisitos::before{
+
+    content: "Sua senha precisa conter:";
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    margin-bottom: 4px;
+}
+
+.senha-requisitos p{
+
+    font-size: 13px;
+
+    color: #ff5c5c;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.senha-requisitos p.valido{
+
+    color: #22c55e;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(-5px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
 
 
 

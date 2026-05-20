@@ -1,9 +1,21 @@
+// =========================
+// LOGOUT
+// =========================
+
 function logout() {
 
     localStorage.removeItem("token");
 
+    localStorage.removeItem("usuario");
+
     window.location.href = "login.html";
 }
+
+
+
+// =========================
+// PROGRESSO MÊS
+// =========================
 
 function atualizarProgressoMes() {
 
@@ -13,11 +25,14 @@ function atualizarProgressoMes() {
 
     const mes = hoje.getMonth();
 
-    const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+    const ultimoDia =
+        new Date(ano, mes + 1, 0).getDate();
 
-    const diaAtual = hoje.getDate();
+    const diaAtual =
+        hoje.getDate();
 
-    const diasRestantes = ultimoDia - diaAtual;
+    const diasRestantes =
+        ultimoDia - diaAtual;
 
     const porcentagem =
         (diaAtual / ultimoDia) * 100;
@@ -25,55 +40,90 @@ function atualizarProgressoMes() {
     const texto =
         `${diasRestantes} dias (${Math.round(porcentagem)}%)`;
 
-    document.getElementById("textoMes").innerText =
-        texto;
+    const textoMes =
+        document.getElementById("textoMes");
 
-    // cor dinâmica
-    let cor = "#22c55e";
+    const barraMes =
+        document.getElementById("barraMes");
 
-    if (diasRestantes <= 7) {
+    if (textoMes) {
 
-        cor = "#ef4444";
-
-    } else if (diasRestantes <= 15) {
-
-        cor = "#f97316";
+        textoMes.innerText = texto;
 
     }
 
-    document.getElementById("barraMes").style.background =
-        cor;
+    if (barraMes) {
 
-    document.getElementById("barraMes").style.width =
-        `${porcentagem}%`;
+        let cor = "#22c55e";
+
+        if (diasRestantes <= 7) {
+
+            cor = "#ef4444";
+
+        } else if (diasRestantes <= 15) {
+
+            cor = "#f97316";
+
+        }
+
+        barraMes.style.background = cor;
+
+        barraMes.style.width =
+            `${porcentagem}%`;
+    }
 }
 
 atualizarProgressoMes();
 
 
 
+// =========================
 // USUÁRIO LOGADO
+// =========================
 
 const usuario = JSON.parse(
     localStorage.getItem("usuario")
 );
 
-document.getElementById("nomeUsuario").innerText =
-    usuario.nome;
+if (usuario) {
 
-document.getElementById("emailUsuario").innerText =
-    usuario.email;
+    const nomeUsuario =
+        document.getElementById("nomeUsuario");
+
+    const emailUsuario =
+        document.getElementById("emailUsuario");
+
+    if (nomeUsuario) {
+
+        nomeUsuario.innerText =
+            usuario.nome ?? "Usuário";
+
+    }
+
+    if (emailUsuario) {
+
+        emailUsuario.innerText =
+            usuario.email ?? "";
+
+    }
 
 
-// CONTROLE MENU ADMIN
 
-const menuUsuarios =
-    document.getElementById("menuUsuarios");
+    // =========================
+    // CONTROLE MENU ADMIN
+    // =========================
 
-if (
-    usuario.nivelAcesso.toLowerCase() !== "admin"
-) {
+    const menuUsuarios =
+        document.getElementById("menuUsuarios");
 
-    menuUsuarios.style.display = "none";
+    if (
+        usuario.nivelAcesso?.toLowerCase() !== "admin"
+    ) {
 
+        if (menuUsuarios) {
+
+            menuUsuarios.style.display = "none";
+
+        }
+    }
 }

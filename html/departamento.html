@@ -4,31 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
 
     <title>Departamentos</title>
 
-<<<<<<< HEAD
-        <!-- Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    </head>
-    <body>
-         <!-- MODAL FORMULÁRIO -->
-        <div class="modal-overlay" id="modal">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
 
-            <div class="modal">
-                <h2>Novo Departamento</h2>
-                
-                <form id="form">
-                    <input type="text" id="nomeDepartamento" placeholder="Nome">
-                    <textarea id="descricaoDepartamento" placeholder="Descrição"></textarea>
-                    <button type="submit">
-                        Adicionar
-                    </button>
-                </form>
-            </div>
-=======
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +20,10 @@
     <link rel="stylesheet" href="../css/style_menu.css">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    <!-- JS -->
-    <script src="../js/model.js" defer></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
@@ -52,12 +32,15 @@
     <div class="modal-overlay" id="modal">
         <div class="modal">
             <h2>Novo Departamento</h2>
+
             <form id="form">
-                <input type="text" placeholder="Nome">
-                <textarea placeholder="Descrição"></textarea>
-                <button type="submit">Adicionar</button>
+                <input type="text" id="nomeDepartamento" placeholder="Nome">
+                <textarea id="descricaoDepartamento" placeholder="Descrição"></textarea>
+
+                <button type="submit">
+                    Adicionar
+                </button>
             </form>
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
         </div>
     </div>
 
@@ -71,61 +54,36 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
+
         <div>
+
             <!-- LOGO -->
             <div class="logo">
                 <div class="logo-box">
                     <img src="../img/Icone.svg" alt="Logo finity">
                 </div>
+
                 <h1>finity</h1>
             </div>
 
             <div class="divider"></div>
 
-<<<<<<< HEAD
-        <aside class="sidebar">
-
-            <div>
-
-                <!-- LOGO -->
-                <div class="logo">
-                    <div class="logo-box">
-                        <img src="../img/Icone.svg" alt="">
-=======
             <!-- MENU -->
             <nav class="menu">
-                <a href="deshbord.html">
+
+                <a href="dashboard.html">
                     <div class="menu-item">
                         <i class="uil uil-apps"></i>
                         <span>Dashboard</span>
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
                     </div>
                 </a>
 
-<<<<<<< HEAD
-                    <h1>finity</h1>
-                </div>
-
-                <div class="divider"></div>
-
-                <!-- MENU -->
-                <nav class="menu">
-                    <a href="dashboard.html">
-                        <div class="menu-item active">
-                            <i class="uil uil-apps"></i>
-                            <span>Dashboard</span>
+                <a href="usuario.html" id="menuUsuarios">              
+                        <div class="menu-item">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Usuários</span>
                         </div>
                     </a>
-
-                    <div class="menu-item" id="menuUsuarios">
-=======
-                <a href="usario.html">
-                    <div class="menu-item">
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
-                        <i class="uil uil-users-alt"></i>
-                        <span>Usuarios</span>
-                    </div>
-                </a>
 
                 <a href="assinaturas.html">
                     <div class="menu-item">
@@ -134,61 +92,6 @@
                     </div>
                 </a>
 
-<<<<<<< HEAD
-                    <a href="categoria.html">
-                        <div class="menu-item">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <span>Categorias</span>
-                        </div>
-                    </a>
-                    
-                    <a href="departamento.html">
-                        <div class="menu-item">
-                            <i class="fa-solid fa-code-branch"></i>
-                            <span>Departamentos</span>
-                        </div>
-                    </a>
-
-                </nav>
-
-            </div>
-
-            <!-- FOOTER -->
-            <div class="footer">
-
-                <div class="progress-area">
-                    <h3>Finalizando mês em</h3>
-                    <span id="textoMes"></span>
-                    <div class="progress-bar">
-                        <div class="progress" id="barraMes"></div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Configurações</span>
-                </div>
-
-            
-                <a href="#" onclick="logout()">
-                    <div class="menu-item">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Sair</span>
-                    </div>       
-                </a>
-                    
-                <div class="bottom-divider"></div>
-
-                <!-- PROFILE -->
-                <div class="profile">
-
-                    <img src="https://i.pravatar.cc/100" alt="">
-
-                    <div class="profile-info">
-                        <h4 id="nomeUsuario"></h4>
-                        <p id="emailUsuario"></p>
-                    </div>
-=======
                 <a href="categoria.html">
                     <div class="menu-item">
                         <i class="fa-solid fa-layer-group"></i>
@@ -202,31 +105,30 @@
                         <span>Departamentos</span>
                     </div>
                 </a>
+
             </nav>
+
         </div>
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 
         <!-- FOOTER -->
         <div class="footer">
+
             <div class="progress-area">
                 <h3>Finalizando mês em</h3>
-                <span>7 dias (93%)</span>
+
+                <span id="textoMes"></span>
+
                 <div class="progress-bar">
-                    <div class="progress"></div>
+                    <div class="progress" id="barraMes"></div>
                 </div>
             </div>
-<<<<<<< HEAD
-
-        </aside>
-=======
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 
             <div class="menu-item">
                 <i class="fa-solid fa-gear"></i>
                 <span>Configurações</span>
             </div>
 
-            <a href="login.html">
+            <a href="#" onclick="logout()">
                 <div class="menu-item">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Sair</span>
@@ -237,35 +139,49 @@
 
             <!-- PROFILE -->
             <div class="profile">
+
                 <img src="https://i.pravatar.cc/100" alt="Foto de perfil">
+
                 <div class="profile-info">
-                    <h4>Mariene Barbosa</h4>
-                    <p>marienebarbosa@gmail.com</p>
+                    <h4 id="nomeUsuario"></h4>
+                    <p id="emailUsuario"></p>
                 </div>
+
             </div>
+
         </div>
+
     </aside>
 
     <!-- MAIN -->
     <main>
+
         <!-- HEADER -->
         <div class="header">
+
             <h1>Departamentos</h1>
+
             <div class="top-actions">
+
                 <div class="search-box">
                     <i class="uil uil-search"></i>
                     <input type="text" placeholder="Buscar departamentos...">
                 </div>
+
                 <button onclick="abrirModal()" class="btn">
                     <i class="fa-solid fa-plus"></i>
                     Add Departamento
                 </button>
+
             </div>
+
         </div>
 
-        <!-- TABELA CONVERTIDA EM ELEMENTO TABLE REAL -->
+        <!-- TABELA -->
         <section class="table-container">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>NOME</th>
@@ -273,56 +189,62 @@
                         <th>EDIÇÃO</th>
                     </tr>
                 </thead>
-                <tbody>
+
+                <tbody id="listaDepartamentos">
+
                     <tr>
                         <td class="nome">Recursos Humanos</td>
-                        <td class="descricao">Responsável pela gestão de colaboradores da empresa...</td>
+                        <td class="descricao">
+                            Responsável pela gestão de colaboradores da empresa...
+                        </td>
                         <td class="acao">
                             <button class="editar-btn">Editar</button>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="nome">TI</td>
-                        <td class="descricao">Cuida dos sistemas, infraestrutura e suporte tecnológico...</td>
+                        <td class="descricao">
+                            Cuida dos sistemas, infraestrutura e suporte tecnológico...
+                        </td>
                         <td class="acao">
                             <button class="editar-btn">Editar</button>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="nome">Marketing</td>
-                        <td class="descricao">Responsável pela divulgação da empresa, criação de campanhas...</td>
+                        <td class="descricao">
+                            Responsável pela divulgação da empresa...
+                        </td>
                         <td class="acao">
                             <button class="editar-btn">Editar</button>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="nome">Financeiro</td>
-                        <td class="descricao">Responsável pelo controle financeiro da empresa...</td>
+                        <td class="descricao">
+                            Responsável pelo controle financeiro da empresa...
+                        </td>
                         <td class="acao">
                             <button class="editar-btn">Editar</button>
                         </td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </section>
+
     </main>
 
-<<<<<<< HEAD
-                    <tbody id="listaDepartamentos">
-                        
-                    </tbody>
-                </table>
-            </div>
-        </main>
-    </body>
-
     <!-- JS -->
-     <script src="../js/menu.js"></script>
-    <!-- <script src="../js/model.js" defer></script> -->
-     <script src="../js/departamento.js"></script>
-     <!-- <script src="../js/auth.js"></script> -->
-=======
+    <script src="../js/auth.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/departamento.js"></script>
+
 </body>
 
->>>>>>> fb24df502bc35ebe376c5675db2c38a14bf442a6
 </html>

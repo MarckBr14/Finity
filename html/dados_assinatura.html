@@ -1,89 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados da Assinatura</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criar Assinatura</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles_assinaturas.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="stylesheet" href="../css/styles_dados_assinatura.css">
-    <link rel="stylesheet" href="../css/style_menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="../css/styles_dados_assinatura.css">
+
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1 class="title">Dados da Assinatura</h1>
+  <h1 class="title">
+    Criar Assinatura
+  </h1>
 
-        <div class="steps">
-            <div class="step active">1</div>
-            <div class="step">2</div>
-            <div class="step">3</div>
-        </div>
+  <!-- PROGRESS -->
 
-        <div class="photo-area">
-            <div class="photo">
-                <i class="fa-regular fa-image"></i>
-            </div>
+  <div class="progress">
 
-            <span class="photo-text">Foto</span>
-        </div>
+    <div class="progress-bar" id="progressBar"></div>
 
-        <form>
+    <div class="step active">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
 
-            <div class="form-grid">
+  </div>
 
-                <div class="input-box">
-                    <input type="text" placeholder="Nome">
-                </div>
+  <!-- PASSO 1 -->
 
-                <div class="input-box">
-                    <input type="text" placeholder="Valor">
-                </div>
+  <div class="page active">
 
-                <div class="input-box">
-                    <input type="text" placeholder="Data de vencimento">
-                </div>
+    <div class="photo-area">
 
-                <div class="input-box">
-                    <input type="text" placeholder="Status">
-                </div>
+      <div class="photo">
+        <i class="fa-regular fa-image"></i>
+      </div>
 
-                <div class="input-box full-width">
-                    <textarea placeholder="Descrição"></textarea>
-                </div>
-
-            </div>
-
-            <div class="buttons">
-
-                <a href="assinaturas.html" class="btn btn-back">
-                    Voltar
-                </a>
-
-                <a href="categoria_assinatura.html" class="btn btn-next">
-                    Avançar
-                </a>
-
-            </div>
-
-        </form>
+      <span>Foto</span>
 
     </div>
 
-</body>
+    <div class="form-grid">
 
+      <div class="input-box">
+
+        <input
+          type="text"
+          id="nome"
+          placeholder="Nome"
+        >
+
+      </div>
+
+      <div class="input-box">
+
+        <input
+          type="number"
+          id="valor"
+          placeholder="Valor"
+        >
+
+      </div>
+
+      <div class="input-box">
+
+        <input
+          type="date"
+          id="dataVencimento"
+        >
+
+      </div>
+
+      <div class="input-box">
+
+        <select id="status">
+
+          <option value="0">
+            Ativa
+          </option>
+
+          <option value="1">
+            Pendente
+          </option>
+
+          <option value="2">
+            Cancelada
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="input-box full">
+
+        <textarea
+          id="descricao"
+          placeholder="Descrição"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button
+        class="btn-back"
+        onclick="window.location.href='assinaturas.html'"
+        >
+            Voltar
+        </button>
+
+      <button
+        class="btn-next"
+        onclick="nextStep()"
+      >
+        Avançar
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- PASSO 2 -->
+
+  <div class="page">
+
+    <h2 class="subtitle">
+      Escolha uma categoria
+    </h2>
+
+    <!-- CATEGORIAS DINÂMICAS -->
+
+    <div
+      class="options-grid"
+      id="listaCategorias"
+    ></div>
+
+    <div class="buttons">
+
+      <button
+        class="btn-back"
+        onclick="prevStep()"
+      >
+        Voltar
+      </button>
+
+      <button
+        class="btn-next"
+        onclick="nextStep()"
+      >
+        Finalizar
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- PASSO 3 -->
+
+  <div class="page">
+
+    <div class="success">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <p>
+        Assinatura criada com sucesso
+      </p>
+
+    </div>
+
+    <div class="buttons">
+
+      <button
+        class="btn-back"
+        onclick="prevStep()"
+      >
+        Voltar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/createAssinatura.js"></script>
+
+</body>
 </html>

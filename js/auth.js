@@ -1,7 +1,14 @@
 const token = localStorage.getItem("token");
 
-if(!token){
+if (!token) {
 
-    window.location.href = "login.html";
+    redirecionarLogin();
 
+}
+
+function redirecionarLogin() {
+
+    localStorage.clear();
+
+    window.location.href = "/html/login.html";
 }
