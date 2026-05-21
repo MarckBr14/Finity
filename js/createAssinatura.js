@@ -123,7 +123,7 @@ async function carregarCategorias(){
     try{
 
         const response = await fetch(
-            `https://${API_URL}/api/categoria`,
+            `${API_URL}/api/categoria`,
             {
                 headers:{
                     "Authorization":
@@ -221,7 +221,7 @@ async function salvarAssinatura(){
         console.log(body);
 
         const response = await fetch(
-            `https://${API_URL}/api/assinatura/criar`,
+            `${API_URL}/api/assinatura/criar`,
             {
                 method:"POST",
 

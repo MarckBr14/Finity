@@ -86,7 +86,7 @@ async function carregarAssinaturas() {
         // =========================
 
         const responseAssinaturas = await fetch(
-            `https://${API_URL}/api/assinatura`,
+            `${API_URL}/api/assinatura`,
             {
                 headers: {
                     "Authorization":
@@ -106,7 +106,7 @@ async function carregarAssinaturas() {
         // =========================
 
         const responsePagamentos = await fetch(
-            `https://${API_URL}/api/pagamento`,
+            `${API_URL}/api/pagamento`,
             {
                 headers: {
                     "Authorization":
@@ -463,7 +463,7 @@ formPagamento.addEventListener(
             // =====================
 
             const response = await fetch(
-                `https://${API_URL}/api/pagamento`,
+                `${API_URL}/api/pagamento`,
                 {
                     method: "POST",
 
@@ -499,7 +499,7 @@ formPagamento.addEventListener(
             // =====================
 
             const pagarResponse = await fetch(
-                `https://${API_URL}/api/pagamento/${data.id}/pagar`,
+                `${API_URL}/api/pagamento/${data.id}/pagar`,
                 {
                     method: "PUT",
 

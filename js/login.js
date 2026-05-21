@@ -9,7 +9,7 @@ btnLogin.addEventListener("click", async (event) => {
 
     try {
 
-        const response = await fetch(`https://${API_URL}/api/auth/login`, {
+        const response = await fetch(`${API_URL}/auth/login`, {
 
             method: "POST",
 

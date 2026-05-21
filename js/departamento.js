@@ -17,7 +17,7 @@ async function carregarDepartamentos() {
     try {
 
         const response = await fetch(
-            `https://${API_URL}/api/departamento`,
+            `${API_URL}/api/departamento`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -104,7 +104,7 @@ form.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-            `https://${API_URL}/api/departamento`,
+            `${API_URL}/api/departamento`,
             {
                 method: "POST",
 

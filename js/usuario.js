@@ -21,7 +21,7 @@ async function carregarUsuarios() {
     try {
 
         const response = await fetch(
-            `https://${API_URL}/api/usuario`,
+            `${API_URL}/api/usuario`,
             {
                 headers: {
                     "Authorization":
@@ -80,7 +80,7 @@ function renderizarUsuarios(usuarios) {
                 <div class="user-info">
 
                     <img
-                        src="https://i.pravatar.cc/40?u=${usuario.email}"
+                        src="i.pravatar.cc/40?u=${usuario.email}"
                     >
 
                     <h4>
@@ -374,7 +374,7 @@ form.addEventListener("submit", async (e) => {
         if (usuarioEditandoId !== null) {
 
             response = await fetch(
-                `https://${API_URL}/api/usuario/atualizar/${usuarioEditandoId}`,
+                `${API_URL}/api/usuario/atualizar/${usuarioEditandoId}`,
                 {
                     method: "PUT",
 
@@ -397,7 +397,7 @@ form.addEventListener("submit", async (e) => {
             // =====================
 
             response = await fetch(
-                `https://${API_URL}/api/usuario/register`,
+                `${API_URL}/api/usuario/register`,
                 {
                     method: "POST",
 
@@ -507,7 +507,7 @@ async function carregarDepartamentos() {
     try {
 
         const response = await fetch(
-            `https://${API_URL}/api/departamento`,
+            `${API_URL}/api/departamento`,
             {
                 headers: {
                     "Authorization":

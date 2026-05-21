@@ -1,1 +1,1 @@
-const API_URL = "https://finity-api.onrender.com";
+const API_URL = "https://finity-api.onrender.com/api";
