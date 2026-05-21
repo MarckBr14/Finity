@@ -21,7 +21,7 @@ async function carregarUsuarios() {
     try {
 
         const response = await fetch(
-            "https://localhost:7022/api/usuario",
+            `https://${API_URL}/api/usuario`,
             {
                 headers: {
                     "Authorization":
@@ -374,7 +374,7 @@ form.addEventListener("submit", async (e) => {
         if (usuarioEditandoId !== null) {
 
             response = await fetch(
-                `https://localhost:7022/api/usuario/atualizar/${usuarioEditandoId}`,
+                `https://${API_URL}/api/usuario/atualizar/${usuarioEditandoId}`,
                 {
                     method: "PUT",
 
@@ -397,7 +397,7 @@ form.addEventListener("submit", async (e) => {
             // =====================
 
             response = await fetch(
-                "https://localhost:7022/api/usuario/register",
+                `https://${API_URL}/api/usuario/register`,
                 {
                     method: "POST",
 
@@ -507,7 +507,7 @@ async function carregarDepartamentos() {
     try {
 
         const response = await fetch(
-            "https://localhost:7022/api/departamento",
+            `https://${API_URL}/api/departamento`,
             {
                 headers: {
                     "Authorization":

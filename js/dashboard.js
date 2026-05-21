@@ -4,7 +4,7 @@ async function carregarDashboard() {
 
     try {
 
-        const response = await fetch("https://localhost:7022/api/dashboard", {
+        const response = await fetch(`https://${API_URL}/api/dashboard`, {
 
             method: "GET",
 
@@ -226,7 +226,7 @@ async function carregarAssinaturas() {
     try {
 
         const response = await fetch(
-            "https://localhost:7022/api/assinatura/proximas",
+            `https://${API_URL}/api/assinatura/proximas`,
             {
                 method: "GET",
 

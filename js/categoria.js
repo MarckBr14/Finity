@@ -42,7 +42,7 @@ async function carregarCategorias() {
     try {
 
         const response = await fetch(
-            "https://localhost:7022/api/categoria",
+            `https://${API_URL}/api/categoria`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -141,7 +141,7 @@ form.addEventListener("submit", async (e) => {
         if (categoriaEditandoId) {
 
             response = await fetch(
-                `https://localhost:7022/api/categoria/${categoriaEditandoId}`,
+                `https://${API_URL}/api/categoria/${categoriaEditandoId}`,
                 {
                     method: "PUT",
 
@@ -164,7 +164,7 @@ form.addEventListener("submit", async (e) => {
             // =========================
 
             response = await fetch(
-                "https://localhost:7022/api/categoria",
+                `https://${API_URL}/api/categoria`,
                 {
                     method: "POST",
 
