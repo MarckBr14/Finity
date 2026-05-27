@@ -1,3 +1,7 @@
+// =========================
+// DASHBOARD
+// =========================
+
 async function carregarDashboard() {
 
     const token = localStorage.getItem("token");
@@ -31,13 +35,12 @@ async function carregarDashboard() {
                 currency: "BRL"
             });
 
-        // pendentes é quantidade
         document.getElementById("economiaMes").innerText =
             dados.pendentes ?? 0;
 
 
         // =========================
-        // CATEGORIAS DINÂMICAS
+        // CATEGORIAS
         // =========================
 
         const listaCategorias =
@@ -104,9 +107,7 @@ async function carregarDashboard() {
         } else {
 
             listaCategorias.innerHTML = `
-            
                 <p>Nenhuma categoria encontrada.</p>
-
             `;
         }
 
@@ -134,6 +135,7 @@ document.getElementById("nomeUsuario").innerText =
 
 document.getElementById("emailUsuario").innerText =
     usuarioDashboard.email;
+
 
 
 // =========================
@@ -246,6 +248,21 @@ async function carregarAssinaturas() {
 
         grid.innerHTML = "";
 
+
+        // =========================
+        // ALERTA
+        // =========================
+
+        const tituloAlerta =
+            document.getElementById("tituloAlerta");
+
+        const infoAlerta =
+            document.getElementById("infoAlerta");
+
+        const linkAlerta =
+            document.getElementById("linkAlerta");
+
+
         if (!assinaturas || assinaturas.length === 0) {
 
             grid.innerHTML = `
@@ -257,10 +274,23 @@ async function carregarAssinaturas() {
 
             `;
 
+            tituloAlerta.innerText =
+                "Nenhum pagamento próximo";
+
+            infoAlerta.innerText =
+                "Você não possui vencimentos próximos";
+
+            linkAlerta.style.display =
+                "none";
+
             return;
         }
 
-        // ordena pela mais próxima
+
+        // =========================
+        // ORDENAÇÃO
+        // =========================
+
         assinaturas.sort((a, b) => {
 
             const hoje = new Date().getDate();
@@ -281,6 +311,58 @@ async function carregarAssinaturas() {
 
             return diasA - diasB;
         });
+
+
+        // =========================
+        // ALERTA PRINCIPAL
+        // =========================
+
+        const proxima = assinaturas[0];
+
+        const statusAlerta =
+            obterStatusVencimento(
+                proxima.dataVencimento
+            );
+
+        let textoTitulo = "";
+
+        if (statusAlerta.diasRestantes === 0) {
+
+            textoTitulo =
+                "1 Pagamento vence hoje";
+
+        } else if (statusAlerta.diasRestantes === 1) {
+
+            textoTitulo =
+                "1 Pagamento vence amanhã";
+
+        } else {
+
+            textoTitulo =
+                `1 Pagamento vence em ${statusAlerta.diasRestantes} dias`;
+        }
+
+        tituloAlerta.innerText =
+            textoTitulo;
+
+        infoAlerta.innerText =
+            `${proxima.nome} - ${
+                (proxima.valor ?? 0).toLocaleString(
+                    "pt-BR",
+                    {
+                        style: "currency",
+                        currency: "BRL"
+                    }
+                )
+            }`;
+
+        linkAlerta.href =
+            `visualizar_assinatura.html?id=${proxima.id}`;
+
+
+        // =========================
+        // CARDS
+        // =========================
 
         assinaturas.forEach((assinatura, index) => {
 
@@ -354,7 +436,10 @@ async function carregarAssinaturas() {
 
                     </div>
 
-                    <button class="btn-card">
+                    <button 
+                        class="btn-card"
+                        onclick="window.location.href='visualizar_assinatura.html?id=${assinatura.id}'"
+                    >
                         Ver detalhes
                     </button>
 
