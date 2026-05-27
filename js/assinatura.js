@@ -304,9 +304,9 @@ function renderizarAssinaturas(lista) {
 
                 <div class="buttons-card">
 
-                    <button>
+                    <a href="visualizar_assinatura.html?id=${assinatura.id}">
                         Detalhes
-                    </button>
+                    </a>
 
                     ${
                         estaPago

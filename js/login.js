@@ -4,12 +4,17 @@ btnLogin.addEventListener("click", async (event) => {
 
     event.preventDefault();
 
+    const textoOriginal = btnLogin.innerText;
+
+    btnLogin.disabled = true;
+    btnLogin.innerText = "Entrando...";
+
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
 
     try {
 
-        const response = await fetch(`${API_URL}/auth/login`, {
+        const response = await fetch(`${API_URL}/api/auth/login`, {
 
             method: "POST",
 
@@ -18,8 +23,8 @@ btnLogin.addEventListener("click", async (event) => {
             },
 
             body: JSON.stringify({
-                email: email,
-                senha: senha
+                email,
+                senha
             })
 
         });
@@ -28,24 +33,41 @@ btnLogin.addEventListener("click", async (event) => {
 
         console.log(dados);
 
-        if(response.ok){
+        if (response.ok) {
 
             localStorage.setItem("token", dados.token);
-            localStorage.setItem("usuario", JSON.stringify(dados.usuario));
 
-            window.location.href = "../html/dashboard.html";
+            localStorage.setItem(
+                "usuario",
+                JSON.stringify(dados.usuario)
+            );
+
+            btnLogin.innerText = "Sucesso!";
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "../html/dashboard.html";
+
+            }, 800);
 
         } else {
 
-            alert(dados.mensagem);
+            alert(dados.mensagem || "Email ou senha inválidos");
+
+            btnLogin.disabled = false;
+            btnLogin.innerText = textoOriginal;
 
         }
 
-    } catch (erro){
+    } catch (erro) {
 
         console.log(erro);
 
-        alert("Erro ao conectar API");
+        alert("Erro ao conectar com a API");
+
+        btnLogin.disabled = false;
+        btnLogin.innerText = textoOriginal;
 
     }
 

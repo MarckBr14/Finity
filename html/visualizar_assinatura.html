@@ -2,15 +2,33 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../img/Icone.svg"
+    />
 
     <title>Visualizar assinatura</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    />
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
@@ -18,8 +36,15 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/visualizar_assinatura.css" />
-    <link rel="stylesheet" href="../css/style_menu.css" />
+    <link
+        rel="stylesheet"
+        href="../css/visualizar_assinatura.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="../css/style_menu.css"
+    />
 
     <!-- Icons -->
     <link
@@ -31,6 +56,7 @@
         rel="stylesheet"
         href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+
 </head>
 
 <body>
@@ -44,7 +70,12 @@
             <div class="logo">
 
                 <div class="logo-box">
-                    <img src="../img/Icone.svg" alt="Logo finity" />
+
+                    <img
+                        src="../img/Icone.svg"
+                        alt="Logo finity"
+                    />
+
                 </div>
 
                 <h1>finity</h1>
@@ -59,8 +90,10 @@
                 <a href="dashboard.html">
 
                     <div class="menu-item">
+
                         <i class="uil uil-apps"></i>
                         <span>Dashboard</span>
+
                     </div>
 
                 </a>
@@ -68,8 +101,10 @@
                 <a href="usuario.html">
 
                     <div class="menu-item">
+
                         <i class="uil uil-users-alt"></i>
                         <span>Usuários</span>
+
                     </div>
 
                 </a>
@@ -77,8 +112,10 @@
                 <a href="assinaturas.html">
 
                     <div class="menu-item active">
+
                         <i class="uil uil-file-edit-alt"></i>
                         <span>Assinaturas</span>
+
                     </div>
 
                 </a>
@@ -86,8 +123,10 @@
                 <a href="categoria.html">
 
                     <div class="menu-item">
+
                         <i class="fa-solid fa-layer-group"></i>
                         <span>Categorias</span>
+
                     </div>
 
                 </a>
@@ -95,8 +134,10 @@
                 <a href="departamento.html">
 
                     <div class="menu-item">
+
                         <i class="fa-solid fa-code-branch"></i>
                         <span>Departamentos</span>
+
                     </div>
 
                 </a>
@@ -131,8 +172,13 @@
 
                 <div class="profile-info">
 
-                    <h4 id="nomeUsuario">Usuário</h4>
-                    <p id="emailUsuario">email@email.com</p>
+                    <h4 id="nomeUsuario">
+                        Usuário
+                    </h4>
+
+                    <p id="emailUsuario">
+                        email@email.com
+                    </p>
 
                 </div>
 
@@ -146,14 +192,19 @@
     <main>
 
         <a href="assinaturas.html">
+
             <i class="uil uil-left-arrow-to-left"></i>
+
         </a>
 
         <div class="subscription-header">
 
             <div class="brand-logo">
 
-                <div class="netflix-icon" id="logoAssinatura">
+                <div
+                    class="netflix-icon"
+                    id="logoAssinatura"
+                >
                     N
                 </div>
 
@@ -161,13 +212,18 @@
 
             <div class="brand-details">
 
-                <h2 id="nomeAssinatura">Carregando...</h2>
+                <h2 id="nomeAssinatura">
+                    Carregando...
+                </h2>
 
                 <p>
+
                     Valor -
+
                     <span id="valorAssinatura">
                         R$ 0,00
                     </span>
+
                 </p>
 
             </div>
@@ -221,7 +277,7 @@
                     <label>Data de vencimento</label>
 
                     <input
-                        type="text"
+                        type="date"
                         id="inputVencimento"
                         disabled
                     />
@@ -268,12 +324,18 @@
 
             <div class="actions-group">
 
-                <button class="btn btn-edit">
+                <button
+                    class="btn btn-edit"
+                    id="btnEditar"
+                >
                     Editar
                 </button>
 
-                <button class="btn btn-pay">
-                    Pagar
+                <button
+                    class="btn btn-pay"
+                    id="btnSalvar"
+                >
+                    Salvar
                 </button>
 
             </div>
@@ -298,20 +360,23 @@
             localStorage.getItem("usuario")
         );
 
-        document.getElementById("nomeUsuario").innerText =
-            usuario.nome;
+        document.getElementById(
+            "nomeUsuario"
+        ).innerText = usuario.nome;
 
-        document.getElementById("emailUsuario").innerText =
-            usuario.email;
+        document.getElementById(
+            "emailUsuario"
+        ).innerText = usuario.email;
 
 
         // =========================
         // ID DA URL
         // =========================
 
-        const params = new URLSearchParams(
-            window.location.search
-        );
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
 
         const id = params.get("id");
 
@@ -328,15 +393,18 @@
             try {
 
                 const response = await fetch(
-                    `${API_URL}/assinatura/${id}`,
+                    `${API_URL}/api/assinatura/${id}`,
                     {
                         method: "GET",
 
                         headers: {
+
                             "Authorization":
                                 `Bearer ${token}`,
+
                             "Content-Type":
                                 "application/json"
+
                         }
                     }
                 );
@@ -346,7 +414,7 @@
 
                 console.log(assinatura);
 
-                // topo
+                // TOPO
                 document.getElementById(
                     "logoAssinatura"
                 ).innerText =
@@ -361,12 +429,15 @@
                     "valorAssinatura"
                 ).innerText =
                     (assinatura.valor ?? 0)
-                    .toLocaleString("pt-BR", {
-                        style: "currency",
-                        currency: "BRL"
-                    });
+                    .toLocaleString(
+                        "pt-BR",
+                        {
+                            style: "currency",
+                            currency: "BRL"
+                        }
+                    );
 
-                // inputs
+                // INPUTS
                 document.getElementById(
                     "inputNome"
                 ).value =
@@ -375,11 +446,7 @@
                 document.getElementById(
                     "inputValor"
                 ).value =
-                    (assinatura.valor ?? 0)
-                    .toLocaleString("pt-BR", {
-                        style: "currency",
-                        currency: "BRL"
-                    });
+                    assinatura.valor;
 
                 document.getElementById(
                     "inputCriacao"
@@ -391,14 +458,14 @@
                 document.getElementById(
                     "inputVencimento"
                 ).value =
-                    formatarData(
+                    formatarInputDate(
                         assinatura.dataVencimento
                     );
 
                 document.getElementById(
                     "inputCategoria"
                 ).value =
-                    assinatura.categoria?.nome ?? "";
+                    assinatura.categoria;
 
                 document.getElementById(
                     "inputStatus"
@@ -419,6 +486,7 @@
                 );
 
             }
+
         }
 
 
@@ -432,6 +500,151 @@
                 .toLocaleDateString("pt-BR");
 
         }
+
+        function formatarInputDate(data) {
+
+            return new Date(data)
+                .toISOString()
+                .split("T")[0];
+
+        }
+
+
+        // =========================
+        // EDITAR
+        // =========================
+
+        const btnEditar =
+            document.getElementById(
+                "btnEditar"
+            );
+
+        btnEditar.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll("input")
+                    .forEach(input => {
+
+                        if (
+                            input.id !==
+                            "inputCriacao"
+                        ) {
+
+                            input.disabled = false;
+
+                        }
+
+                    });
+
+            }
+        );
+
+
+        // =========================
+        // SALVAR
+        // =========================
+
+        const btnSalvar =
+            document.getElementById(
+                "btnSalvar"
+            );
+
+        btnSalvar.addEventListener(
+            "click",
+            async () => {
+
+                const token =
+                    localStorage.getItem(
+                        "token"
+                    );
+
+                const body = {
+
+                    nome:
+                        document.getElementById(
+                            "inputNome"
+                        ).value,
+
+                    valor:
+                        parseFloat(
+                            document.getElementById(
+                                "inputValor"
+                            ).value
+                        ),
+
+                    dataVencimento:
+                        document.getElementById(
+                            "inputVencimento"
+                        ).value,
+
+                    status:
+                        document.getElementById(
+                            "inputStatus"
+                        ).value,
+
+                    descricao:
+                        document.getElementById(
+                            "inputDescricao"
+                        ).value
+
+                };
+
+                try {
+
+                    const response =
+                        await fetch(
+                            `${API_URL}/api/assinatura/atualizar/${id}`,
+                            {
+                                method: "PUT",
+
+                                headers: {
+
+                                    "Content-Type":
+                                        "application/json",
+
+                                    "Authorization":
+                                        `Bearer ${token}`
+
+                                },
+
+                                body:
+                                    JSON.stringify(body)
+                            }
+                        );
+
+                    const dados =
+                        await response.json();
+
+                    if (response.ok) {
+
+                        alert(
+                            "Assinatura atualizada com sucesso!"
+                        );
+
+                        carregarAssinatura();
+
+                    } else {
+
+                        alert(
+                            dados.mensagem
+                        );
+
+                    }
+
+                } catch (erro) {
+
+                    console.log(erro);
+
+                    alert(
+                        "Erro ao atualizar assinatura"
+                    );
+
+                }
+
+            }
+        );
 
 
         carregarAssinatura();
