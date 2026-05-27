@@ -431,3 +431,136 @@ main h1{
 
     cursor: default;
 }
+
+/* RESPONSIVIDADE PARA NOTEBOOKS MENORES */
+@media (max-width: 1366px) and (max-height: 800px){
+
+    main{
+        padding: 25px;
+    }
+
+    main h1{
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    /* CARDS SUPERIORES */
+    .cards{
+        gap: 15px;
+    }
+
+    .top-card{
+        width: 100%;
+        height: 110px;
+        padding: 16px;
+    }
+
+    .icon-card{
+        width: 40px;
+        height: 40px;
+    }
+
+    /* TOP ACTIONS */
+    .top-actions{
+        margin-top: 20px;
+    }
+
+    .search-box input{
+        width: 420px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .btn{
+        width: 240px;
+        height: 45px;
+        margin-right: 40px;
+        padding: 12px 18px;
+    }
+
+    .btn a{
+        font-size: 14px;
+        padding: 0;
+    }
+
+    /* GRID ASSINATURAS */
+    .grid-assinaturas{
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .assinatura-card{
+        padding: 16px;
+    }
+
+    .assinatura-card h2{
+        font-size: 24px;
+    }
+
+    .vencimento{
+        font-size: 13px;
+    }
+
+    /* BOTÕES DOS CARDS */
+    .buttons-card{
+        gap: 12px;
+    }
+
+    .buttons-card a,
+    .buttons-card button{
+        height: 42px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .btn-editar{
+        height: 38px;
+        font-size: 13px;
+    }
+
+    /* MODAL */
+    .modal{
+        width: 500px;
+        padding: 25px;
+    }
+
+    .modal h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .upload-circle{
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+    }
+
+    .modal input,
+    .modal textarea{
+        padding: 12px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .modal button{
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    /* SUCCESS */
+    .success-box{
+        width: 360px;
+        height: 260px;
+        gap: 20px;
+    }
+
+    .check-icon{
+        width: 75px;
+        height: 75px;
+        font-size: 40px;
+    }
+
+    .success-box p{
+        font-size: 20px;
+    }
+}

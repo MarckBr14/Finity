@@ -234,3 +234,97 @@ button {
   font-size: 42px;
   color: #16c084;
 }
+
+/* RESPONSIVIDADE PARA NOTEBOOKS MENORES */
+@media (max-width: 1366px) and (max-height: 800px){
+
+    .container{
+        width: 760px;
+        padding: 35px;
+    }
+
+    .title{
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    /* PROGRESSO */
+    .progress{
+        margin-bottom: 35px;
+    }
+
+    .progress::before{
+        width: 240px;
+    }
+
+    .step{
+        width: 35px;
+        height: 35px;
+        margin: 0 65px;
+        font-size: 14px;
+    }
+
+    /* FOTO */
+    .photo{
+        width: 85px;
+        height: 85px;
+        font-size: 32px;
+    }
+
+    /* FORM */
+    .form-grid{
+        gap: 15px;
+    }
+
+    .input-box input,
+    .input-box textarea,
+    .input-box select{
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    /* BOTÕES */
+    .buttons{
+        margin-top: 30px;
+    }
+
+    button{
+        padding: 13px 40px;
+        font-size: 14px;
+    }
+
+    /* CATEGORIAS */
+    .subtitle{
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .options-grid{
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .option{
+        padding: 22px;
+        font-size: 22px;
+    }
+
+    /* SUCESSO */
+    .success{
+        margin-top: 50px;
+    }
+
+    .success-icon{
+        width: 120px;
+        height: 120px;
+        font-size: 55px;
+    }
+
+    .success p{
+        font-size: 32px;
+    }
+}

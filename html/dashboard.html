@@ -1,191 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
-        <title>Dashboard</title>
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/styles_menu_deshbord.css">
-        <link rel="stylesheet" href="../css/style_menu.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../img/Icone.svg" />
+    <title>Dashboard</title>
 
-        <!-- Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    </head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_menu_deshbord.css">
+    <link rel="stylesheet" href="../css/style_menu.css">
 
-    <body>
-        <aside class="sidebar">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
 
-            <div>
+<body>
+    <!-- ======= ESTRUTURA DO VLIBRAS ======= -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top"></div>
+        </div>
+    </div>
 
-                <!-- LOGO -->
-                <div class="logo">
-                    <div class="logo-box">
-                        <img src="../img/Icone.svg" alt="">
-                    </div>
+    <!-- ======= SCRIPT ATUALIZADO ======= -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        // Inicialização padrão recomendada
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <aside class="sidebar">
 
-                    <h1>finity</h1>
+        <div>
+
+            <!-- LOGO -->
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="../img/Icone.svg" alt="">
                 </div>
 
-                <div class="divider"></div>
-
-                <!-- MENU -->
-                <nav class="menu">
-                    <a href="dashboard.html">
-                        <div class="menu-item active">
-                            <i class="uil uil-apps"></i>
-                            <span>Dashboard</span>
-                        </div>
-                    </a>
-                    <a href="usuario.html" id="menuUsuarios">              
-                        <div class="menu-item">
-                            <i class="uil uil-users-alt"></i>
-                            <span>Usuários</span>
-                        </div>
-                    </a>
-
-                    <a href="assinaturas.html" id="menuAssinaturas">
-                        <div class="menu-item">
-                            <i class="uil uil-file-edit-alt"></i>
-                            <span>Assinaturas</span>
-                        </div>
-                    </a>
-
-                    <a href="categoria.html">
-                        <div class="menu-item">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <span>Categorias</span>
-                        </div>
-                    </a>
-                    
-                    <a href="departamento.html">
-                        <div class="menu-item">
-                            <i class="fa-solid fa-code-branch"></i>
-                            <span>Departamentos</span>
-                        </div>
-                    </a>
-
-                </nav>
-
+                <h1>finity</h1>
             </div>
 
-            <!-- FOOTER -->
-            <div class="footer">
+            <div class="divider"></div>
 
-                <div class="progress-area">
-                    <h3>Finalizando mês em</h3>
-                    <span id="textoMes"></span>
-                    <div class="progress-bar">
-                        <div class="progress" id="barraMes"></div>
+            <!-- MENU -->
+            <nav class="menu">
+                <a href="dashboard.html">
+                    <div class="menu-item active">
+                        <i class="uil uil-apps"></i>
+                        <span>Dashboard</span>
                     </div>
-                </div>
-
-                <div class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Configurações</span>
-                </div>
-
-            
-                <a href="#" onclick="logout()">
-                    <div class="menu-item">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Sair</span>
-                    </div>       
                 </a>
-                    
-                <div class="bottom-divider"></div>
-
-                <!-- PROFILE -->
-                <div class="profile">
-
-                    <img src="https://i.pravatar.cc/100" alt="">
-
-                    <div class="profile-info">
-                        <h4 id="nomeUsuario"></h4>
-                        <p id="emailUsuario"></p>
+                <a href="usuario.html" id="menuUsuarios">
+                    <div class="menu-item">
+                        <i class="uil uil-users-alt"></i>
+                        <span>Usuários</span>
                     </div>
+                </a>
 
+                <a href="assinaturas.html" id="menuAssinaturas">
+                    <div class="menu-item">
+                        <i class="uil uil-file-edit-alt"></i>
+                        <span>Assinaturas</span>
+                    </div>
+                </a>
+
+                <a href="categoria.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Categorias</span>
+                    </div>
+                </a>
+
+                <a href="departamento.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Departamentos</span>
+                    </div>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            <div class="progress-area">
+                <h3>Finalizando mês em</h3>
+                <span id="textoMes"></span>
+                <div class="progress-bar">
+                    <div class="progress" id="barraMes"></div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </div>
+
+
+            <a href="#" onclick="logout()">
+                <div class="menu-item">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </div>
+            </a>
+
+            <div class="bottom-divider"></div>
+
+            <!-- PROFILE -->
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100" alt="">
+
+                <div class="profile-info">
+                    <h4 id="nomeUsuario"></h4>
+                    <p id="emailUsuario"></p>
                 </div>
 
             </div>
 
-        </aside>
-        <main>
-            <h1>Dashboard</h1>
-            <section class="cards">
-                <div class="card">
-                    <div class="top">
-                        <div class="icone">
-                            <i class="uil uil-wallet"></i>
-                        </div>
-                        <h6>Saldo total</h6>
-                    </div>
-                    <div class="center">
-                        <h3 id="saldoTotal">R$ 0,00</h3>
-                    </div>
-                    <div class="bottom">
-                        <h6><span>12%</span> em relação ao mês passado</h6>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="top">
-                        <div class="icone">
-                            <i class="uil uil-chart-line"></i>
-                        </div>
-                        <h6>Gasto do mês</h6>
-                    </div>
-                    <div class="center">
-                        <h3 id="gastoMes">R$ 0,00</h3>
-                    </div>
-                    <div class="bottom">
-                        <h6><span>12%</span> em relação ao mês passado</h6>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="top">
-                        <div class="icone">
-                            <i class="uil uil-wallet"></i>
-                        </div>
-                        <h6>Economia este mês</h6>
-                    </div>
-                    <div class="center">
-                        <h3 id="economiaMes">R$ 0,00</h3>
-                    </div>
-                    <div class="bottom">
-                        <h6><span>12%</span> em relação ao mês passado</h6>
-                    </div>
-                </div>
-            </section>
+        </div>
 
-            <section class="alerta">
-                <div class="icone">
-                    <i class="uil uil-exclamation-triangle"></i>
+    </aside>
+    <main>
+        <h1>Dashboard</h1>
+        <section class="cards">
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-wallet"></i>
+                    </div>
+                    <h6>Saldo total</h6>
                 </div>
-                <div class="content">
-                    <div class="title">
-                        <h2>1 Pagamento vence amanhã</h2>
-                    </div>
-                    <div class="info">
-                        <p>Netflix - R$ 55,90</p>
-                    </div>
+                <div class="center">
+                    <h3 id="saldoTotal">R$ 0,00</h3>
                 </div>
-                <a href="#">Ver detalhes</a>
-            </section>
-
-            <section class="container">
-                <div class="assinaturas">
-                    <div class="header">
-                        <h2>Assinaturas</h2>
-                        <a href="#">Ver todas</a>
+                <div class="bottom">
+                    <h6><span>12%</span> em relação ao mês passado</h6>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-chart-line"></i>
                     </div>
-                    <div class="grid-cards" id="gridAssinaturas">
+                    <h6>Gasto do mês</h6>
+                </div>
+                <div class="center">
+                    <h3 id="gastoMes">R$ 0,00</h3>
+                </div>
+                <div class="bottom">
+                    <h6><span>12%</span> em relação ao mês passado</h6>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="icone">
+                        <i class="uil uil-wallet"></i>
+                    </div>
+                    <h6>Economia este mês</h6>
+                </div>
+                <div class="center">
+                    <h3 id="economiaMes">R$ 0,00</h3>
+                </div>
+                <div class="bottom">
+                    <h6><span>12%</span> em relação ao mês passado</h6>
+                </div>
+            </div>
+        </section>
 
-                        <!-- <div class="card">
+        <section class="alerta">
+            <div class="icone">
+                <i class="uil uil-exclamation-triangle"></i>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <h2>1 Pagamento vence amanhã</h2>
+                </div>
+                <div class="info">
+                    <p>Netflix - R$ 55,90</p>
+                </div>
+            </div>
+            <a href="#">Ver detalhes</a>
+        </section>
+
+        <section class="container">
+            <div class="assinaturas">
+                <div class="header">
+                    <h2>Assinaturas</h2>
+                    <a href="#">Ver todas</a>
+                </div>
+                <div class="grid-cards" id="gridAssinaturas">
+
+                    <!-- <div class="card">
 
                             <div class="card-topo">
                                 <div class="logo">
@@ -279,21 +295,22 @@
                             </button>
 
                         </div> -->
-                    </div>
-                </div>    
-
-                <div class="categorias">
-                    <h2>Gastos por categorias</h2>
-
-                    <div class="listaCategorias" id="listaCategorias"></div>
                 </div>
-            </section>
-        </main>
-        <!-- JS -->
-        <script src="../js/api.js"></script>
-        <script src="../js/menu.js"></script>
-        <script src="../js/auth.js" defer></script>
-        <script src="../js/dashboard.js"></script>
-        <script src="../js/login.js" defer></script>
-    </body>
+            </div>
+
+            <div class="categorias">
+                <h2>Gastos por categorias</h2>
+
+                <div class="listaCategorias" id="listaCategorias"></div>
+            </div>
+        </section>
+    </main>
+    <!-- JS -->
+    <script src="../js/api.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/login.js" defer></script>
+</body>
+
 </html>
