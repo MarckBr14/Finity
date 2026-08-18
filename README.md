@@ -8,6 +8,9 @@ A Finity API é responsável por toda a lógica de negócio do sistema, incluind
 
 ## 🛠️ Tecnologias Utilizadas
 
+*JS
+*CSS
+* HTML
 * C#
 * .NET Web API
 * MySQL
