@@ -1,102 +1,49 @@
-# 🚀 Finity API
+# 💰 Finity
 
-API desenvolvida em **C# (.NET)** para gerenciamento de assinaturas e controle financeiro.
+> Dashboard web desenvolvido para organização e visualização de informações financeiras, com uma interface moderna, intuitiva e focada na experiência do usuário.
 
-## 📌 Sobre o Projeto
+## 📌 Sobre o projeto
 
-A Finity API é responsável por toda a lógica de negócio do sistema, incluindo autenticação de usuários, gerenciamento de assinaturas e análise de gastos.
+O **Finity** é uma aplicação web desenvolvida como projeto de estudo e portfólio, com o objetivo de criar uma interface para **gestão e visualização de informações financeiras**.
 
-## 🛠️ Tecnologias Utilizadas
+O projeto foi desenvolvido com foco em **Desenvolvimento Front-End**, aplicando conceitos de estruturação de páginas, estilização, interatividade, organização de componentes e experiência do usuário.
 
-* JS
-* CSS
-* HTML
-* C#
-* .NET Web API
-* MySQL
-* Entity Framework (opcional)
-* JWT (Autenticação)
+A aplicação conta com um dashboard contendo diferentes elementos visuais para facilitar a organização e apresentação das informações.
 
-## 📁 Estrutura do Projeto
+## 🚀 Funcionalidades
 
-```
-/Controllers
-/Models
-/DTOs
-/Services
-/Repositories
-/Data
-/Config
-```
+- 📊 Dashboard para visualização de informações
+- 💳 Organização de informações financeiras
+- 📁 Categorias e seções para organização dos dados
+- 📋 Cards informativos
+- 🧭 Menu de navegação lateral
+- 🔔 Área de notificações
+- 👤 Área de usuário
+- 🎨 Interface moderna e intuitiva
 
-## 🔐 Funcionalidades
+## 🛠️ Tecnologias utilizadas
 
-* Cadastro de usuário
-* Login com autenticação JWT
-* CRUD de assinaturas
-* Controle financeiro
-* Dashboard com dados consolidados
+- **HTML5** — Estruturação das páginas
+- **CSS3** — Estilização e criação da interface
+- **JavaScript** — Interatividade e funcionalidades
+- **Git** — Controle de versão
+- **GitHub** — Hospedagem e versionamento do projeto
 
-## ⚙️ Como Executar o Projeto
+## 📂 Estrutura do projeto
 
-1. Clone o repositório:
-
-```
-git clone https://github.com/seu-usuario/finity-api.git](https://github.com/ReinaldoBarbosa/Finity-Web-Api-.git
-```
-
-2. Acesse a pasta do projeto:
-
-```
-cd finity-api
-```
-
-3. Configure o banco de dados no `appsettings.json`:
-
-```
-"ConnectionStrings": {
-  "DefaultConnection": "Server=localhost;Database=finity;User=root;Password=sua_senha;"
-}
-```
-
-4. Execute a aplicação:
-
-```
-dotnet run
-```
-
-## 📡 Endpoints Principais
-
-### 🔐 Autenticação
-
-* `POST /login`
-* `POST /register`
-
-### 📦 Assinaturas
-
-* `GET /subscriptions`
-* `POST /subscriptions`
-* `PUT /subscriptions/{id}`
-* `DELETE /subscriptions/{id}`
-
-### 📊 Dashboard
-
-* `GET /dashboard`
-
-## 🧪 Testes
-
-Utilize ferramentas como:
-
-* Postman
-* Insomnia
-
-## 👥 Equipe
-
-Projeto desenvolvido por:
-
-* Marcos Antonio
-* Equipe Finity
-
-## 📄 Licença
-
-Este projeto é acadêmico e sem
+```text
+Finity/
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── index.html
+│
+└── README.md
